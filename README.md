@@ -8,5 +8,6 @@ A collection of Raspberry Pi scripts that are used on the Raspberry Pi
   - Breadboard
   - RGB LED
   - 3x Resistors
-  - 4x F-M Jumper Wires
+  - 6x F-M Jumper Wires
+  - Button
   
