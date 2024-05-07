@@ -9,5 +9,5 @@ A collection of Raspberry Pi scripts that are used on the Raspberry Pi
   - RGB LED
   - 3x Resistors
   - 6x F-M Jumper Wires
-  - Button
+  - Button (Optional)
   
