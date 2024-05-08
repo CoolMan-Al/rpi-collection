@@ -5,7 +5,7 @@ from colorzero import Color
 rgb = RGBLED(17,27,22)
 button = Button(26)
 
-refresh = 1000
+refresh = 100
 
 red = 255
 green = 0
