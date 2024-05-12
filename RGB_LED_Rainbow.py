@@ -2,11 +2,10 @@ from gpiozero import RGBLED, Button
 from time import sleep
 from colorzero import Color
 
-rgb = RGBLED(17,27,22)
-button = Button(26)
+rgb = RGBLED(26,19,13)
+button = Button(6)
 
-refresh = 100
-
+refresh = 1000
 red = 255
 green = 0
 blue = 0
