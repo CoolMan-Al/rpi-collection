@@ -16,10 +16,7 @@ while True:
     sleep(0.001)
 
     if l_btn.is_active == True or r_btn.is_active == True:
-        if l_btn.is_active == True:
-            print("Left Side Won!")
-        elif r_btn.is_active == True:
-            print("Right Side Won!")
+        print("Left Side Won!") if l_btn.is_active == True else print("Right Side Won!")
         print("You took " + str(count) + "ms.")
         finished = True
         quit()
