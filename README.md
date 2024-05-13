@@ -1,6 +1,6 @@
-# RPi Scripts
+# RPi Learning Scripts
 
-A collection of Raspberry Pi scripts that use different modules and components 
+A collection of scripts that I use during lerning about physical computing. They are intended to be used with the Raspberry Pi.
 
 ## Script List
 ### List of Scripts with their relevant hardware/modules
