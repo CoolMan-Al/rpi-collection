@@ -13,9 +13,10 @@ A collection of scripts that I use during lerning about physical computing. They
   - Button (Optional)
     
 - Reaction Game
+There are two versions of the reaction game. One uses a standard LED and the other uses an RGB LED.
 - - Breadboard
-  - LED
-  - Resistor
+  - LED (Or RGB LED)
+  - Resistor (3x if using RGB LED)
   - 2x Buttons
-  - 4x F-M Jumper Wires
+  - 4x F-M Jumper Wires (6x if using RGB LED)
   - 3x M-M Jumper Wires
