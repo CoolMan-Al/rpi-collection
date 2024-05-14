@@ -19,7 +19,6 @@ def start():
 
     sleep(uniform(5,10))
     led.color = Color(0,0,255)
-    return count
 
 start()
 while True:

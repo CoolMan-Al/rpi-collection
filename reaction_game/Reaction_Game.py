@@ -8,10 +8,12 @@ r_btn = Button(20)
 
 count = 0
 
-print("Get ready...")
-sleep(uniform(5,10))
-led.on()
+def start():
+    print("Get ready...")
+    sleep(uniform(5,10))
+    led.on()
 
+start()
 while True:
     count+= 1
     sleep(0.001)
@@ -28,8 +30,5 @@ while True:
                 quit()
             elif r_btn.is_active == True:
                 count = 0
-                print("Restarting game!")
-                print("Get ready...")
-                sleep(uniform(5,10))
-                led.on()
+                start()
                 break
