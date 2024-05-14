@@ -13,7 +13,7 @@ A collection of scripts that I use during learning about physical computing. The
   - Button (Optional)
     
 - Reaction Game
-There are two versions of the reaction game. One uses a standard LED and the other uses an RGB LED.
+<br/> There are two versions of the reaction game. One uses a standard LED and the other uses an RGB LED.
 - - Breadboard
   - LED (Or RGB LED)
   - Resistor (3x if using RGB LED)
