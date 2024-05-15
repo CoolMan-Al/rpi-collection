@@ -33,7 +33,7 @@ while True:
         sleep(1)
         while True:
             if l_btn.is_active == True:
-                print("Stopping game...")
+                print("Stopping game!")
                 quit()
             elif r_btn.is_active == True:
                 print("Restarting game!")
