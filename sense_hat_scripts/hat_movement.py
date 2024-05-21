@@ -1,6 +1,10 @@
+# Use the Sense Hat V2 Joystick to draw
+# Move the stick around and draw
+# Middle click for switching color
+# Hold Middle Click for eraser. Tap middle click again to switch back to colors
+
 from sense_hat import SenseHat
 from time import sleep
-from numpy import array, where
 
 row = 0
 col = 0
@@ -11,20 +15,29 @@ color_set = [
 [0,0,100],
 [100,100,0],
 [100,0,100],
-[0,100,100]
+[0,100,100],
+[100,0,50],
+[100,50,0]
 ]
+
 color = color_set[0]
 
 
 sense = SenseHat()
 sense.clear()
 
-def change():
+def change(event):
     global color
-    if color_set.index(color) == len(color_set) - 1:
-        color = color_set[0]
-    else:        
-        color = color_set[color_set.index(color) + 1]
+    if event.action == 'pressed':
+        if color == [0,0,0]:
+            color = color_set[0]
+        else:
+            if color_set.index(color) == len(color_set) - 1:
+                color = color_set[0]
+            else:        
+                color = color_set[color_set.index(color) + 1]
+    elif event.action == 'held':
+        color = [0,0,0]
 
 def up(event):
     if event.action == 'pressed':
