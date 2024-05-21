@@ -24,3 +24,5 @@ A collection of scripts that I made during my time learning about GPIO computing
 
   - Parts needed:
     - Sense HAT V2
+    - GPIO Extender (Optional)
+    - GPIO Ribbon Cable (Optional)
