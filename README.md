@@ -16,3 +16,11 @@ A collection of scripts that I made during my time learning about GPIO computing
     - 2x Buttons
     - 6x F-M Jumper Wires
     - 3x M-M Jumper Wires
+
+- Sense HAT <br/>
+  - Scripts:
+    - Temperature Sensor
+    - Joystick Drawing
+
+  - Parts needed:
+    - Sense HAT V2
