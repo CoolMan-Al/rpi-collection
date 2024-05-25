@@ -1,30 +1,9 @@
-# Use the Sense Hat V2 Joystick to draw
-# Move the stick around and draw
-# Middle click for switching color
-# Hold Middle Click for eraser. Tap middle click again to switch back to colors
-
 from sense_hat import SenseHat
 from time import sleep
 
-row = 0
-col = 0
-color_set = [
-[100,100,100],
-[100,0,0],
-[0,100,0],
-[0,0,100],
-[100,100,0],
-[100,0,100],
-[0,100,100],
-[100,0,50],
-[100,50,0]
-]
-
-color = color_set[0]
-
-
-sense = SenseHat()
-sense.clear()
+# Middle click function
+# Lets the user press to switch color
+# When user holds middle click, will turn into eraser
 
 def change(event):
     global color
@@ -38,6 +17,11 @@ def change(event):
                 color = color_set[color_set.index(color) + 1]
     elif event.action == 'held':
         color = [0,0,0]
+
+# Direction Functions
+# Will only use pressed to avoid duplicate movements being passed
+# User uses the joystick to change the position of the pixel
+# Will paint red if the user tries to move out of bounds
 
 def up(event):
     if event.action == 'pressed':
@@ -83,13 +67,38 @@ def right(event):
             col += 1
             sense.set_pixel(col,row,color)
 
-sense.set_pixel(0,0, color)
+if __name__ == "__main__":
+    # Initialisation
+    sense = SenseHat()
+    sense.clear()
 
-sense.stick.direction_up     = up
-sense.stick.direction_down   = down
-sense.stick.direction_left   = left
-sense.stick.direction_right  = right
-sense.stick.direction_middle = change
+    # Coordinates for pixel position
+    row = 0
+    col = 0
 
-while True:
-    pass
+    # List of colours user can switch through
+    # Default font is white
+    color_set = [
+    [100,100,100],
+    [100,0,0],
+    [0,100,0],
+    [0,0,100],
+    [100,100,0],
+    [100,0,100],
+    [0,100,100],
+    [100,0,50],
+    [100,50,0]
+    ]
+    color = color_set[0]
+    sense.set_pixel(0,0, color)
+
+    # Controls
+    sense.stick.direction_up     = up
+    sense.stick.direction_down   = down
+    sense.stick.direction_left   = left
+    sense.stick.direction_right  = right
+    sense.stick.direction_middle = change
+
+    # While loop to keep program running
+    while True:
+        pass
