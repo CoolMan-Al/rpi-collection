@@ -6,7 +6,7 @@ A collection of scripts that I made during my time learning about GPIO computing
 ### List of Scripts with their relevant hardware/modules
 - RGB LED <br/>
   - Scripts:
-    - Rainbow Flow Light(Stoppable with button)
+    - Rainbow Flow Light (Stoppable with button)
     - Reaction Game (2 Player capability)
 
   - Parts needed:
@@ -19,8 +19,9 @@ A collection of scripts that I made during my time learning about GPIO computing
 
 - Sense HAT <br/>
   - Scripts:
-    - Temperature Sensor
+    - Binary Clock
     - Joystick Drawing
+    - Temperature Sensor
 
   - Parts needed:
     - Sense HAT V2
