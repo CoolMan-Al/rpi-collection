@@ -18,10 +18,15 @@ if __name__ == "__main__":
         # Converts again into a binary string
         # Then splits the number into a list of bits
 
+        # Splitter
         border = '00000000'
+
+        # Date values
         day    = format(int(strftime("%w")), '08b')
         date   = format(int(strftime("%d")), '08b')
         month  = format(int(strftime("%m")), '08b')
+
+        #Time values
         hour   = format(int(strftime("%H")), '08b')
         minute = format(int(strftime("%M")), '08b')
         second = format(int(strftime("%S")), '08b')
