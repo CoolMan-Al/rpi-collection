@@ -18,7 +18,7 @@ A collection of scripts that I made during my time learning about GPIO computing
     - 3x M-M Jumper Wires
 
 - Sense HAT <br/>
-(Note: All colors are done up to 100 instead of 255 to reduce the brightness)
+(Note: All colors are coded up to 100 instead of 255 to reduce the brightness)
   - Scripts:
     - Binary Clock
     - Joystick Drawing
