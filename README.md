@@ -23,7 +23,7 @@ A collection of scripts that I made during my time learning about GPIO computing
     - Binary Clock
     - Joystick Drawing
     - Temperature Sensor
-    - Dice Roller
+    - Six and Twenty Sided Dice Roller
 
   - Parts needed:
     - Sense HAT V2
