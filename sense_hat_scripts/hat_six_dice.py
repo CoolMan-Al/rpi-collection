@@ -5,10 +5,6 @@ from time import sleep
 sense = SenseHat()
 sense.clear()
 
-def show_roll(number):
-    sense.set_pixels(dice[number])
-    sleep(5)
-
 blk = [0,0,0]
 pix = [100,100,100]
 
