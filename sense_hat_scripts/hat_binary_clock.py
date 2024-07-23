@@ -1,13 +1,32 @@
+#!/usr/bin/python3
 from sense_hat import SenseHat
 from time import sleep, strftime
 
+# Controls
 
+# Function that will be called when the joystick is middle clicked
+# Switches between date and time
 def change(event):
-    if event.action == 'pressed':
+    if event.action == 'pressed' and event.direction == 'middle':
         global switch
         switch = not switch
 
+# This function will rotate the text
+def rotate(event):
+    if event.action == 'pressed':
+        match event.direction:
+            case 'up':
+                sense.set_rotation(180)
+            case 'left':
+                sense.set_rotation(90)
+            case 'right':
+                sense.set_rotation(270)
+            case 'down':
+                sense.set_rotation(0)
+
+
 if __name__ == "__main__":
+    # Initialise the Sense Hat
     sense = SenseHat()
     sense.clear()
     switch = False
@@ -34,6 +53,11 @@ if __name__ == "__main__":
 
         # The input list
         sense.stick.direction_middle = change
+        # Inputting a direction on the joystick will call the function to rotate the text
+        sense.stick.direction_up     = rotate
+        sense.stick.direction_down   = rotate
+        sense.stick.direction_left   = rotate
+        sense.stick.direction_right  = rotate
 
         #Toggles boolean when button pressed
         # User can change display from time to date by clicking the joystick

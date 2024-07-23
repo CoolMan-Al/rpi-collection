@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from sense_hat import SenseHat
 from time import sleep
 
@@ -6,10 +7,30 @@ sense = SenseHat()
 sense.clear()
 
 # Font colors for each value
-light = [100,100,100]
-tcol = [100,0,0]
-pcol = [0,100,0]
-hcol = [0,0,100]
+light = [255,255,255]
+tcol = [255,0,0]
+pcol = [0,255,0]
+hcol = [0,0,255]
+
+# Controls
+# This function will rotate the text
+def rotate(event):
+    if event.action == 'pressed':
+        match event.direction:
+            case 'up':
+                sense.set_rotation(180)
+            case 'left':
+                sense.set_rotation(90)
+            case 'right':
+                sense.set_rotation(270)
+            case 'down':
+                sense.set_rotation(0)
+
+# Inputting a direction on the joystick will call the function to rotate the text
+sense.stick.direction_up     = rotate
+sense.stick.direction_down   = rotate
+sense.stick.direction_left   = rotate
+sense.stick.direction_right  = rotate
 
 while True:
     # Temperature reading
